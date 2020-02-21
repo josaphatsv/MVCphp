@@ -10,7 +10,7 @@ class dbConector
 		$type="mysql:";
 		$host="localhost";
 		$db="tester";
-		$user="root",
+		$user="root";
 		$pass="";
 
 		try{
@@ -19,7 +19,7 @@ class dbConector
 			$conexion->exec("SET CHARACTER SET UTF8");
 
 
-		}cacth(Exception $e){
+		}catch(Exception $e){
 			die('Error'.$e->getMessage());
 			echo "Linea del error".$e->getLine();
 		}

@@ -5,11 +5,11 @@
  *Controlador de Articulos
  */
 //LLamada al Modelo
-require_once("/Models/articulos_Model.php");
+require_once("Models/articulos_Model.php");
 $productos=new articulos_Model();
 $listadoProductos=$productos->get_articulos();
 
 //Llamada a la vista
-require_once("/Views/articulos_View.php");
+require_once("Views/articulos_View.php");
 
  ?>

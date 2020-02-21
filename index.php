@@ -6,7 +6,7 @@
 </head>
 <body>
 <?php 
-	require_once("/controllers/articulos_Controllers.php");
+	require_once("controllers/articulos_Controller.php");
  ?>
 </body>
 </html>

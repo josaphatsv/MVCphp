@@ -8,9 +8,9 @@ class articulos_Model
 {
 	private $db;
 	private $articulos;
-	function __construct(argument)
+	function __construct()
 	{
-		require_once("/Models/dbConector.php");
+		require_once("Models/dbConector.php");
 		$this->db=dbConector::conexion();
 		$this->articulos=array();
 
