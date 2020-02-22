@@ -10,7 +10,15 @@
 <body>
 	<div class="container">
 <?php 
-	require_once("controllers/articulos_Controller.php");
+		
+		if(!isset($_REQUEST['c'])){
+			require_once("controllers/articulos_Controller.php");
+			$controller=new articulos_Controller();
+			$controller->Index();
+		}else{
+			echo "OPS algo paso";
+		}
+
  ?>
 </div>
  <script
