@@ -24,12 +24,16 @@ class articulos_Model
 		return $this->articulos;
 	}
 
-	public function ingresarArticulo($data){
+	public function ingresarArticulo($data)
+	{
 
-		try{
+		try
+		{
 			$sql="INSERT INTO articulos (descripcion,costo,precioVenta) VALUES (?,?,?)";
-			$this->db->prepare($sql)->execute(array($data->descripcion,$data->costo,$data->precio))
-		}catch(Exception $e){
+			$this->db->prepare($sql)->execute(array($data->descripcion,$data->costo,$data->precio));
+		}catch(Exception $e)
+		{
+
 			die($e->getMessage());
 
 		}
