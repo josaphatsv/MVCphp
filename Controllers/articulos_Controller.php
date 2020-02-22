@@ -6,10 +6,22 @@
  */
 //LLamada al Modelo
 require_once("Models/articulos_Model.php");
-$productos=new articulos_Model();
-$listadoProductos=$productos->get_articulos();
+class articulos_Controller{
+	private $productos;
 
-//Llamada a la vista
-require_once("Views/articulos_View.php");
+	public function __CONSTRUCT(){
+
+		$this->productos=new articulos_Model();
+
+	}
+	public function Index(){
+		
+		$listadoProductos=$this->productos->get_articulos();
+		//Llamada a la vista
+		require_once("Views/articulos_View.php");
+
+	}
+}
+
 
  ?>
